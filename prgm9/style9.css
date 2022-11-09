@@ -1,0 +1,18 @@
+#table1{width:100%;
+	font-family:sans-serif;
+	border-collapse:collapse;
+	}
+th{
+	padding:20px;
+	text-align:center;
+	color:white;
+	background-color:#b22222;
+	border:1px solid grey;
+}
+td{
+	padding:8px;
+	border:1px solid grey;
+}
+tr:hover{background-color:burly wood}
+tr:nth-child(even){background-color:#f2f2f2}
+

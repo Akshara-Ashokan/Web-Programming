@@ -1,0 +1,16 @@
+a{	display:block;
+	text-decoration:none;
+	padding:6px 8px 6px 16px;
+	color:white;
+}
+.sidenav{
+height:100%;
+width:160px;
+padding-top:20px;
+background-color:green;
+}
+.sidenav a: hover {color:red;}
+.main{margin-left:160px;
+padding:0px 10px;
+height:2000px;
+}
