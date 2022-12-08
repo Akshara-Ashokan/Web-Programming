@@ -1,0 +1,111 @@
+<html>   
+<head>
+<title>Form Validation</title>  
+
+<!------------------------------------------------------------------------------------------------------------------------------>    
+       <script type = "text/javascript">
+<!-------------------------------------------------------------------form validation start-------------------------------------->
+       function validate()
+       {
+        var fname=document.myform.fname.value;
+        if(fname=="")
+           {
+           alert( "Please provide your First name!" );
+           document.myform.fname.focus() ;
+           return false;
+           }
+        else
+           {
+            var letters = /^[A-Za-z]+$/;
+   	    if(fname.match(letters))
+     		{
+      		
+     		}
+     	    else
+     		{
+     			alert("Please enter characters only!!");
+     			document.myform.fname.focus() ;
+     			return false;
+     		}	
+           }
+       
+       
+<!----------------------------------------------------------------------------------------------------------------------------------->
+         var lname=document.myform.lname.value;
+         if(lname=="")
+           {
+           alert( "Please provide your Last name!" );
+           document.myform.lname.focus() ;
+           return false;
+           }
+           else
+           {
+           var letters = /^[A-Za-z]+$/;
+   	    if(lname.match(letters))
+     		{
+      		
+     		}
+     	    else
+     		{
+     			alert("Please enter characters only!!");
+     			document.myform.lname.focus() ;
+     			return false;
+     		}	
+           }
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+         var email=document.myform.email.value;
+         if(email=="")
+         {
+          alert("Please provide your email ID");
+          document.myform.email.focus();
+          return false;
+          }
+         else
+         at=email.indexOf("@");
+         dot=email.lastIndexOf(".");
+         
+         if (at < 1 || ( dot - at < 2 )|| dot+2>=email.length) {
+            alert("Please enter correct email ID")
+            document.myform.email.focus() ;
+            return false;
+         }
+         
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+        var mob=document.myform.mob.value;
+        var phoneno = /^\d{10}$/;
+        if(mob=="")
+        {
+         alert("Please provide your Mobile number");
+         document.myform.mob.focus();
+         return false;
+         }
+         else if(!(mob.match(phoneno)))
+         {
+         alert("Please correct Mobile number");
+         document.myform.mob.focus();
+         return false;
+        }
+        
+}
+       
+       </script>      
+</head>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<body><center>
+      <form name="myform" onsubmit="return(validate())" method="post">
+            
+            <table border='2' cellpadding='05'>
+            <tr> <td>First Name</td><td><input type='text' name='fname'></td><td>Last Name</td><td><input type='text' name='lname'></td></tr>
+
+            <tr> <td colspan='4'><center><b>Contact Details</b></center></td></tr>
+
+            <tr> <td>Email</td><td><input type='text'name='email'></td><td>phone Number</td><td><input type='text' name='mob'></td></tr>
+
+            <tr> <td  colspan='4'><center><input type="submit" value="submit">&nbsp;&nbsp;<input type="reset" value="reset"></center></td></tr>
+            </table>
+
+     </form>
+
+</center></body>
+</html>
