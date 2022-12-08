@@ -9,8 +9,10 @@ width:160px;
 padding-top:20px;
 background-color:green;
 }
-.sidenav a: hover {color:red;}
-.main{margin-left:160px;
+.sidenav a:hover{color:red;}
+.main{
+margin-left:290px;
 padding:0px 10px;
 height:2000px;
+position:top;
 }
